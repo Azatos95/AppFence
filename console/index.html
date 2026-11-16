@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>APP FENCE · 应用围栏</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+<style>
+  :root {
+    --bg: #080808;
+    --panel: #0f0f0f;
+    --panel2: #141414;
+    --line: #2b2b2b;
+    --line2: #1a1a1a;
+    --accent: #ffd400;
+    --accent-dim: #8a7300;
+    --text: #ececec;
+    --muted: #8b8b8b;
+    --ok: #9dff8a;
+    --bad: #ff5252;
+    --warn: #ffd400;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--line2) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line2) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--text);
+  }
+  header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 15px 28px; border-bottom: 1px solid var(--line);
+    background: rgba(8,8,8,.9);
+  }
+  header h1 { font-size: 15px; letter-spacing: 2px; margin: 0; font-weight: 700; color: var(--accent); }
+  header .en { font-size: 11px; color: var(--muted); letter-spacing: 3px; }
+  .badge { font-size: 11px; padding: 3px 10px; border: 1px solid var(--line); color: var(--muted); letter-spacing: 1px; }
+  .badge.ok { border-color: var(--ok); color: var(--ok); }
+  main { max-width: 1200px; margin: 24px auto; padding: 0 28px; }
+  .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
+  .tab {
+    padding: 10px 22px; cursor: pointer; color: var(--muted);
+    font-size: 13px; letter-spacing: 2px; border: 1px solid transparent;
+    border-bottom: none; position: relative; top: 1px; transition: color .12s;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { background: var(--accent); color: #000; font-weight: 700; }
+  .section { display: none; animation: sect-in .35s cubic-bezier(.16,1,.3,1); }
+  .section.active { display: block; }
+  @keyframes sect-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; position: relative; }
+  .card::before {
+    content: ''; position: absolute; left: -1px; top: -1px; width: 10px; height: 10px;
+    border-left: 2px solid var(--accent); border-top: 2px solid var(--accent);
+  }
+  .card .label { font-size: 11px; color: var(--muted); letter-spacing: 2px; margin-bottom: 8px; }
+  .card .value { font-size: 20px; font-weight: 700; font-family: Consolas, monospace; }
+  .ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); } .muted { color: var(--muted); }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; align-items: center; }
+  button {
+    background: transparent; color: var(--text); border: 1px solid var(--line);
+    padding: 8px 16px; font-size: 12px; letter-spacing: 1px; cursor: pointer;
+    transition: all .15s ease-out;
+  }
+  button:hover { border-color: var(--accent); color: var(--accent); }
+  button.danger { border-color: #5a2020; color: #ff8a8a; }
+  button.danger:hover { border-color: var(--bad); background: rgba(255,82,82,.08); color: var(--bad); }
+  button.okbtn { border-color: var(--accent); color: #000; background: var(--accent); }
+  button.okbtn:hover { background: #ffdf4d; }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  select, input { background: var(--panel); color: var(--text); border: 1px solid var(--line); padding: 8px 10px; font-size: 12px; }
+  select:focus, input:focus { outline: none; border-color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line2); font-size: 12px; }
+  th { background: var(--panel2); color: var(--accent-dim); font-size: 11px; letter-spacing: 2px; font-weight: 600; }
+  tr:hover td { background: rgba(255,212,0,.03); }
+  #log {
+    background: #050505; border: 1px solid var(--line); padding: 12px;
+    height: 200px; overflow: auto; font-family: Consolas, monospace;
+    font-size: 12px; white-space: pre-wrap; color: #9a9a9a;
+  }
+  #log::before { content: '> SYSTEM LOG //'; display: block; color: var(--accent-dim); margin-bottom: 6px; letter-spacing: 2px; }
+  .empty { color: var(--muted); padding: 20px; text-align: center; letter-spacing: 1px; }
+  h3 { font-size: 13px; color: var(--accent); letter-spacing: 2px; font-weight: 600; margin: 20px 0 10px; }
+  h3::before { content: '▌'; margin-right: 6px; }
+  .flash { animation: flash 25ms steps(1) 2; }
+  @keyframes flash { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  footer { text-align: center; color: var(--muted); font-size: 10px; letter-spacing: 3px; padding: 24px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>APP FENCE</h1>
+  <span class="en">// 应用围栏 · 零信任终端</span>
+  <span class="badge">OFFLINE</span>
+  <span class="badge" id="conn">连接中…</span>
+</header>
+<main>
+  <div class="tabs">
+    <div class="tab active" data-tab="overview">概览</div>
+    <div class="tab" data-tab="pending">待审批 <span id="pendingCount" class="warn"></span></div>
+    <div class="tab" data-tab="audit">审计</div>
+    <div class="tab" data-tab="inventory">软件</div>
+    <div class="tab" data-tab="autostart">启动项</div>
+  </div>
+
+  <div class="section active" id="sec-overview">
+    <div class="cards">
+      <div class="card"><div class="label">代码完整性状态 / CI STATUS</div><div class="value" id="state">—</div></div>
+      <div class="card"><div class="label">策略文件 / POLICY</div><div class="value" id="policy">—</div></div>
+      <div class="card"><div class="label">上次学习 / LAST SCAN</div><div class="value" id="lastlearn" style="font-size:14px">—</div></div>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <div class="label">系统健康 / HEALTH</div>
+      <div id="health" style="font-size:13px" class="muted">检查中…</div>
+    </div>
+    <div class="actions">
+      <button id="btnLearn">学习采集</button>
+      <button id="btnDeployAudit">审计部署</button>
+      <button id="btnDeployEnforce" class="danger">强制部署</button>
+      <button id="btnRollback" class="danger">回滚策略</button>
+      <button id="btnRefresh">刷新</button>
+    </div>
+    <div class="actions" style="margin-bottom:16px">
+      <select id="addType">
+        <option value="folder">目录（展开为哈希）</option>
+        <option value="path">文件路径</option>
+      </select>
+      <input id="addPath" placeholder="C:\Program Files\YourApp 或 C:\path\app.exe" style="width:420px">
+      <button id="btnAddPath">添加路径规则</button>
+      <button id="btnDeny" class="danger">禁止程序</button>
+      <input id="netAddr" placeholder="目标 IP（可选，留空=全部）" style="width:200px">
+      <button id="btnNetBlock" class="danger">禁止联网</button>
+    </div>
+    <h3>规则 / RULES（最近 30 条）</h3>
+    <table>
+      <thead><tr><th>文件</th><th>SHA256（前 16 位）</th><th>签名者</th></tr></thead>
+      <tbody id="rules"></tbody>
+    </table>
+  </div>
+
+  <div class="section" id="sec-pending">
+    <p class="muted" style="font-size:13px">被拦截且尚未允许的程序。点击「允许」将其加入白名单并重新部署策略。</p>
+    <table>
+      <thead><tr><th>程序</th><th>路径</th><th>拦截时间</th><th>操作</th></tr></thead>
+      <tbody id="pendingList"></tbody>
+    </table>
+    <h3>用户申请 / REQUESTS（WdacRequest.exe 提交）</h3>
+    <table>
+      <thead><tr><th>程序</th><th>申请人</th><th>时间</th><th>操作</th></tr></thead>
+      <tbody id="requestList"></tbody>
+    </table>
+    <h3>提权申请 / ELEVATION</h3>
+    <div class="actions">
+      <input id="elevPath" placeholder="要提权运行的程序路径" style="width:420px">
+      <button id="btnElevRequest">提交提权申请</button>
+    </div>
+    <table>
+      <thead><tr><th>ID</th><th>程序</th><th>用户</th><th>时间</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody id="elevList"></tbody>
+    </table>
+  </div>
+
+  <div class="section" id="sec-audit">
+    <p class="muted" style="font-size:13px">代码完整性审计日志（最近 200 条）：策略拦截、审计事件与加载记录。</p>
+    <div class="actions">
+      <select id="auditType">
+        <option value="">全部类型</option>
+        <option>审计拦截</option>
+        <option>已阻止</option>
+        <option>策略阻止</option>
+        <option>签名信息</option>
+        <option>策略加载</option>
+      </select>
+      <input id="auditSearch" placeholder="搜索程序名/路径…" style="width:280px">
+      <button id="auditFilterBtn">筛选</button>
+      <button id="btnExportCsv">导出 CSV</button>
+      <button id="btnExportHtml">导出 HTML</button>
+    </div>
+    <table>
+      <thead><tr><th>时间</th><th>程序</th><th>事件类型</th><th>事件 ID</th></tr></thead>
+      <tbody id="auditList"></tbody>
+    </table>
+  </div>
+
+  <div class="section" id="sec-inventory">
+    <p class="muted" style="font-size:13px">本机已安装应用（注册表 Uninstall + 卸载命令）。「卸载」会先备份注册表键，可回滚；可选彻底删除残留目录。可按发布者筛选并批量处理。</p>
+    <div class="actions">
+      <select id="pubFilter"><option value="">全部发布者</option></select>
+      <input id="appSearch" placeholder="搜索应用名/发布者…" style="width:260px">
+      <button id="btnTrustPub">信任该发布者</button>
+      <button id="btnDenyPub" class="danger">拒绝该发布者</button>
+    </div>
+    <table>
+      <thead><tr><th>软件</th><th>版本</th><th>发布者</th><th>安装位置</th><th>操作</th></tr></thead>
+      <tbody id="invList"></tbody>
+    </table>
+  </div>
+
+  <div class="section" id="sec-autostart">
+    <p class="muted" style="font-size:13px">开机/登录启动项（注册表 Run、启动文件夹、计划任务、Winlogon）。Agent 每 60 秒扫描一次，变化会记录到日志。移除前会自动快照，可恢复。</p>
+    <div class="actions">
+      <input id="asName" placeholder="名称（如 MyApp）" style="width:180px">
+      <input id="asCmd" placeholder="命令/路径（如 C:\path\app.exe）" style="width:400px">
+      <button id="btnAsAdd">添加启动项</button>
+    </div>
+    <h3>最近变化 / CHANGES</h3>
+    <table>
+      <thead><tr><th>时间</th><th>动作</th><th>类型</th><th>名称</th><th>命令</th></tr></thead>
+      <tbody id="autoChanges"></tbody>
+    </table>
+    <h3>全部启动项 / AUTOSTART</h3>
+    <table>
+      <thead><tr><th>类型</th><th>名称</th><th>命令</th><th>作用域</th><th>操作</th></tr></thead>
+      <tbody id="autostartList"></tbody>
+    </table>
+    <h3>快照备份 / BACKUPS</h3>
+    <table>
+      <thead><tr><th>时间</th><th>动作</th><th>类型</th><th>名称</th><th>操作</th></tr></thead>
+      <tbody id="asBackups"></tbody>
+    </table>
+  </div>
+
+  <h3>操作日志 / LOG</h3>
+  <div id="log"></div>
+</main>
+<footer>APP FENCE · 应用围栏 · 2026</footer>
+<script>
+const API = 'http://localhost:8765';
+function log(msg) {
+  const el = document.getElementById('log');
+  el.textContent += '[' + new Date().toLocaleTimeString() + '] ' + msg + '\n';
+  el.scrollTop = el.scrollHeight;
+}
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+  document.querySelectorAll('.section').forEach(s => s.classList.toggle('active', s.id === 'sec-' + name));
+}
+async function loadRequests() {
+  try {
+    const list = await fetch(API + '/api/requests').then(r => r.json());
+    const tbody = document.getElementById('requestList');
+    tbody.innerHTML = '';
+    if (!list || list.length === 0) { tbody.innerHTML = '<tr><td colspan="4" class="empty">暂无用户申请</td></tr>'; return; }
+    list.forEach(function(item) {
+      const name = (item.FilePath || '').split('\\').pop();
+      const tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + name + '<div class="muted" style="font-size:11px">' + (item.FilePath || '') + '</div></td>' +
+        '<td class="muted">' + (item.User || '-') + '</td><td class="muted">' + (item.Time || '') + '</td>' +
+        '<td><button class="okbtn">批准</button></td>';
+      tr.querySelector('button').onclick = async function() {
+        this.disabled = true; log('批准申请: ' + item.FilePath);
+        try {
+          const r = await fetch(API + '/api/approve?path=' + encodeURIComponent(item.FilePath), {method:'POST'}).then(x => x.json());
+          log('批准结果: ' + (r.output || '').substring(0, 200));
+          this.parentElement.innerHTML = '<span class="ok">已批准</span>';
+          setTimeout(loadRequests, 2000); refresh();
+        } catch(e) { log('批准失败: ' + e.message); this.disabled = false; }
+      };
+      tbody.appendChild(tr);
+    });
+  } catch(e) { log('获取申请失败: ' + e.message); }
+}
+async function loadElevation() {
+  try {
+    const list = await fetch(API + '/api/elevation-list').then(r => r.json());
+    const tbody = document.getElementById('elevList');
+    tbody.innerHTML = '';
+    if (!list || list.length === 0) { tbody.innerHTML = '<tr><td colspan="6" class="empty">暂无提权申请</td></tr>'; return; }
+    list.slice(-30).reverse().forEach(function(e) {
+      const tr = document.createElement('tr');
+      const statusCls = e.Status === 'approved' ? 'ok' : e.Status === 'denied' ? 'bad' : 'warn';
+      tr.innerHTML = '<td class="muted">' + (e.Id || '') + '</td><td>' + (e.Name || '') + '<div class="muted" style="font-size:11px">' + (e.Path || '') + '</div></td><td class="muted">' + (e.User || '') + '</td><td class="muted">' + (e.Time || '') + '</td><td class="' + statusCls + '">' + (e.Status || '') + '</td>' +
+        '<td>' + (e.Status === 'pending' ? '<button class="okbtn">批准</button> <button class="danger">拒绝</button>' : '') + '</td>';
+      const btns = tr.querySelectorAll('button');
+      if (btns.length === 2) {
+        btns[0].onclick = async function() {
+          this.disabled = true;
+          try {
+            const r = await fetch(API + '/api/elevation-approve?id=' + encodeURIComponent(e.Id), {method:'POST'}).then(x => x.json());
+            log('批准提权: ' + (r.output || '').substring(0, 200));
+          } catch(err) { log('失败: ' + err.message); }
+          setTimeout(loadElevation, 1500);
+        };
+        btns[1].onclick = async function() {
+          this.disabled = true;
+          try {
+            const r = await fetch(API + '/api/elevation-deny?id=' + encodeURIComponent(e.Id), {method:'POST'}).then(x => x.json());
+            log('拒绝提权: ' + (r.output || '').substring(0, 200));
+          } catch(err) { log('失败: ' + err.message); }
+          setTimeout(loadElevation, 1500);
+        };
+      }
+      tbody.appendChild(tr);
+    });
+  } catch(e) { log('获取提权申请失败: ' + e.message); }
+}
+document.getElementById('btnElevRequest').onclick = async function() {
+  const p = document.getElementById('elevPath').value.trim();
+  if (!p) { alert('请输入程序路径'); return; }
+  if (!confirm('提交提权申请？\n\n' + p)) return;
+  this.disabled = true; log('提交提权申请: ' + p);
+  try {
+    const r = await fetch(API + '/api/elevation-request?path=' + encodeURIComponent(p), {method:'POST'}).then(x => x.json());
+    log('结果: ' + (r.output || '').substring(0, 200));
+    setTimeout(loadElevation, 1500);
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false;
+};
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  switchTab(t.dataset.tab);
+  if (t.dataset.tab === 'pending') { loadPending(); loadRequests(); loadElevation(); }
+  if (t.dataset.tab === 'audit') loadAudit();
+  if (t.dataset.tab === 'inventory') loadInventory();
+  if (t.dataset.tab === 'autostart') loadAutostart();
+});
+
+async function refresh() {
+  try {
+    const s = await fetch(API + '/api/status').then(r => r.json());
+    document.getElementById('conn').textContent = '已连接';
+    document.getElementById('conn').className = 'badge ok';
+    const st = document.getElementById('state');
+    st.textContent = s.state;
+    st.className = 'value ' + (s.state === 'Enforced' ? 'ok' : s.state === 'Audit' ? 'warn' : 'muted');
+    document.getElementById('policy').textContent = s.sipolicy ? '已部署' : '未部署';
+    document.getElementById('policy').className = 'value ' + (s.sipolicy ? 'ok' : 'muted');
+    document.getElementById('lastlearn').textContent = s.lastLearn || '从未';
+    const rules = await fetch(API + '/api/rules').then(r => r.json());
+    const tbody = document.getElementById('rules');
+    tbody.innerHTML = '';
+    (rules.Rules || []).slice(-30).reverse().forEach(function(r) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + r.FilePath.split('\\').pop() + '<div class="muted" style="font-size:11px">' + r.FilePath + '</div></td>' +
+                     '<td style="font-family:Consolas">' + (r.SHA256 || '').substring(0, 16) + '…</td>' +
+                     '<td class="muted">' + (r.Signer ? r.Signer.substring(0, 40) : '未签名') + '</td>';
+      tbody.appendChild(tr);
+    });
+    log('状态: ' + s.state + '，规则数: ' + ((rules.Rules || []).length));
+    try {
+      const h = await fetch(API + '/api/health').then(r => r.json());
+      const he = document.getElementById('health');
+      if (h && h.Checks) {
+        const bad = h.Checks.filter(c => !c.Pass);
+        if (bad.length === 0) {
+          he.innerHTML = '<span class="ok">✅ 全部通过（' + h.Checks.length + ' 项）</span>';
+        } else {
+          he.innerHTML = '<span class="bad">⚠️ ' + bad.length + ' 项异常：</span>' + bad.map(c => c.Name + '（' + c.Detail + '）').join('；');
+        }
+      } else { he.textContent = '无法获取'; }
+    } catch(e) { document.getElementById('health').textContent = '无法获取'; }
+  } catch (e) { log('连接失败: ' + e.message); document.getElementById('conn').textContent = '未连接'; }
+}
+
+async function loadPending() {
+  try {
+    const list = await fetch(API + '/api/pending').then(r => r.json());
+    const tbody = document.getElementById('pendingList');
+    tbody.innerHTML = '';
+    document.getElementById('pendingCount').textContent = (list || []).length ? '(' + list.length + ')' : '';
+    if (!list || list.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="4" class="empty">暂无待审批程序</td></tr>';
+      return;
+    }
+    list.forEach(function(item) {
+      const tr = document.createElement('tr');
+      const dispName = item.AppName ? (item.AppName + ' <span class="muted">→ ' + item.Name + '</span>') : item.Name;
+      tr.innerHTML = '<td>' + dispName + '</td><td class="muted" style="font-size:12px">' + item.FilePath + '</td><td class="muted">' + item.Time + '</td>' +
+        '<td><button class="okbtn">允许</button></td>';
+      tr.querySelector('button').onclick = async function() {
+        this.disabled = true; log('审批中: ' + item.FilePath);
+        try {
+          const r = await fetch(API + '/api/approve?path=' + encodeURIComponent(item.FilePath), {method:'POST'}).then(x => x.json());
+          log('审批完成: ' + (r.output || '').substring(0, 200));
+          this.parentElement.innerHTML = '<span class="ok">已允许</span>';
+          setTimeout(loadPending, 2000); refresh();
+        } catch (e) { log('审批失败: ' + e.message); this.disabled = false; }
+      };
+      tbody.appendChild(tr);
+    });
+  } catch (e) { log('获取待审批失败: ' + e.message); }
+}
+
+let auditCache = [];
+function renderAudit() {
+  const type = document.getElementById('auditType').value;
+  const kw = (document.getElementById('auditSearch').value || '').toLowerCase();
+  const tbody = document.getElementById('auditList');
+  tbody.innerHTML = '';
+  const rows = auditCache.filter(function(i) {
+    if (type && i.Type !== type) return false;
+    if (kw && !((i.Name || '').toLowerCase().includes(kw) || (i.File || '').toLowerCase().includes(kw))) return false;
+    return true;
+  });
+  if (rows.length === 0) { tbody.innerHTML = '<tr><td colspan="4" class="empty">无匹配记录</td></tr>'; return; }
+  rows.forEach(function(item) {
+    const cls = (item.Type === '已阻止' || item.Type === '策略阻止') ? 'bad' : 'warn';
+    const tr = document.createElement('tr');
+    const dispName = item.AppName ? (item.AppName + ' <span class="muted">→ ' + (item.Name || '') + '</span>') : (item.Name || '-');
+    tr.innerHTML = '<td class="muted">' + item.Time + '</td><td>' + dispName + '<div class="muted" style="font-size:11px">' + (item.File || '') + '</div></td>' +
+                   '<td class="' + cls + '">' + item.Type + '</td><td class="muted">' + item.EventId + '</td>';
+    tbody.appendChild(tr);
+  });
+}
+let allApps = [];
+function renderApps() {
+  const pub = document.getElementById('pubFilter').value;
+  const kw = (document.getElementById('appSearch').value || '').toLowerCase();
+  const tbody = document.getElementById('invList');
+  tbody.innerHTML = '';
+  const rows = allApps.filter(function(a) {
+    if (pub && a.Publisher !== pub) return false;
+    if (kw && !((a.Name || '').toLowerCase().includes(kw) || (a.Publisher || '').toLowerCase().includes(kw))) return false;
+    return true;
+  });
+  if (rows.length === 0) { tbody.innerHTML = '<tr><td colspan="5" class="empty">无匹配应用</td></tr>'; return; }
+  rows.forEach(function(a) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + a.Name + '</td><td class="muted">' + (a.Version || '-') + '</td><td class="muted">' + (a.Publisher || '-') + '</td><td class="muted" style="font-size:11px">' + (a.InstallLocation || '') + '</td>' +
+      '<td><button class="danger">卸载</button></td>';
+    tr.querySelector('button').onclick = async function() {
+      if (!confirm('确认卸载该应用？\n\n' + a.Name + '\n\n注册表键会先备份到 out\\app-backup，可回滚。')) return;
+      const purge = confirm('是否同时删除残留安装目录（彻底删除）？\n\n确定 = 彻底删除，取消 = 仅卸载');
+      this.disabled = true; log('卸载中: ' + a.Name);
+      try {
+        const r = await fetch(API + '/api/app-uninstall?name=' + encodeURIComponent(a.Name) + '&purge=' + (purge ? '1' : '0'), {method:'POST'}).then(x => x.json());
+        log('卸载结果: ' + (r.output || '').substring(0, 300));
+        this.parentElement.innerHTML = '<span class="ok">已卸载</span>';
+        setTimeout(loadInventory, 3000);
+      } catch(e) { log('卸载失败: ' + e.message); this.disabled = false; }
+    };
+    tbody.appendChild(tr);
+  });
+}
+async function loadInventory() {
+  try {
+    const d = await fetch(API + '/api/apps').then(r => r.json());
+    allApps = d.Apps || [];
+    const sel = document.getElementById('pubFilter');
+    const pubs = [];
+    allApps.forEach(function(a) { if (a.Publisher && pubs.indexOf(a.Publisher) < 0) pubs.push(a.Publisher); });
+    pubs.sort();
+    sel.innerHTML = '<option value="">全部发布者</option>' + pubs.map(function(p) { return '<option>' + p.replace(/&/g, '&amp;').replace(/</g, '&lt;') + '</option>'; }).join('');
+    renderApps();
+    log('应用: ' + allApps.length + ' 个');
+  } catch(e) { log('获取应用失败: ' + e.message); }
+}
+document.getElementById('pubFilter').onchange = renderApps;
+document.getElementById('appSearch').oninput = renderApps;
+document.getElementById('btnTrustPub').onclick = async function() {
+  const pub = document.getElementById('pubFilter').value;
+  if (!pub) { alert('请先选择发布者'); return; }
+  const n = allApps.filter(function(a) { return a.Publisher === pub; }).length;
+  if (!confirm('信任发布者「' + pub + '」下的 ' + n + ' 个应用？\n\n（按安装目录添加允许规则）')) return;
+  this.disabled = true; log('信任发布者: ' + pub);
+  try {
+    const r = await fetch(API + '/api/publisher-action?publisher=' + encodeURIComponent(pub) + '&action=trust', {method:'POST'}).then(x => x.json());
+    log('结果: ' + (r.output || '').substring(0, 300));
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false; setTimeout(refresh, 2000);
+};
+document.getElementById('btnDenyPub').onclick = async function() {
+  const pub = document.getElementById('pubFilter').value;
+  if (!pub) { alert('请先选择发布者'); return; }
+  const n = allApps.filter(function(a) { return a.Publisher === pub; }).length;
+  if (!confirm('拒绝发布者「' + pub + '」下的 ' + n + ' 个应用？\n\n（将对其可执行文件添加拒绝规则，Deny 优先）')) return;
+  this.disabled = true; log('拒绝发布者: ' + pub);
+  try {
+    const r = await fetch(API + '/api/publisher-action?publisher=' + encodeURIComponent(pub) + '&action=deny', {method:'POST'}).then(x => x.json());
+    log('结果: ' + (r.output || '').substring(0, 300));
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false; setTimeout(refresh, 2000);
+};
+
+async function loadAudit() {
+  try {
+    auditCache = (await fetch(API + '/api/audit').then(r => r.json())) || [];
+    renderAudit();
+  } catch (e) { log('获取审计失败: ' + e.message); }
+}
+async function loadAutostart() {
+  try {
+    const d = await fetch(API + '/api/autostart').then(r => r.json());
+    const tbody = document.getElementById('autostartList');
+    tbody.innerHTML = '';
+    const items = d.Items || [];
+    if (items.length === 0) { tbody.innerHTML = '<tr><td colspan="4" class="empty">暂无启动项</td></tr>'; }
+    items.forEach(function(i) {
+      const tr = document.createElement('tr');
+      const pubFlag = i.UnknownPublisher ? ' <span class="bad" title="未签名/未知发布者">⚠ 未知发布者</span>' : '';
+      tr.innerHTML = '<td class="muted">' + i.Type + '</td><td>' + i.Name + pubFlag + '</td><td class="muted" style="font-size:11px">' + (i.Command || '') + '</td><td class="muted">' + (i.Scope || '') + '</td>' +
+        '<td><button class="danger">移除</button></td>';
+      tr.querySelector('button').onclick = async function() {
+        if (!confirm('确认移除该启动项？\n\n' + i.Name + '\n' + (i.Command || '') + '\n\n（会先自动快照，可在下方备份中恢复）')) return;
+        this.disabled = true; log('移除启动项: ' + i.Name);
+        try {
+          const r = await fetch(API + '/api/autostart-remove?name=' + encodeURIComponent(i.Name), {method:'POST'}).then(x => x.json());
+          log('结果: ' + (r.output || '').substring(0, 300));
+          this.parentElement.innerHTML = '<span class="ok">已移除</span>';
+          setTimeout(loadAutostart, 2000);
+        } catch(e) { log('失败: ' + e.message); this.disabled = false; }
+      };
+      tbody.appendChild(tr);
+    });
+    try {
+      const ch = await fetch(API + '/api/autostart-changes').then(r => r.json());
+      const tc = document.getElementById('autoChanges');
+      tc.innerHTML = '';
+      const arr = (ch && Array.isArray(ch)) ? ch : [];
+      if (arr.length === 0) { tc.innerHTML = '<tr><td colspan="5" class="empty">最近无变化</td></tr>'; }
+      arr.slice(-30).reverse().forEach(function(c) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td class="muted">' + (c.Time || '') + '</td><td class="' + (c.Action === '新增' ? 'warn' : 'muted') + '">' + c.Action + '</td><td class="muted">' + c.Type + '</td><td>' + c.Name + '</td><td class="muted" style="font-size:11px">' + (c.Command || '') + '</td>';
+        tc.appendChild(tr);
+      });
+    } catch(e) {}
+    log('启动项: ' + items.length + ' 项');
+    loadBackups();
+  } catch(e) { log('获取启动项失败: ' + e.message); }
+}
+async function loadBackups() {
+  try {
+    const d = await fetch(API + '/api/autostart-backups').then(r => r.json());
+    const tbody = document.getElementById('asBackups');
+    tbody.innerHTML = '';
+    const list = (d && Array.isArray(d)) ? d : [];
+    if (list.length === 0) { tbody.innerHTML = '<tr><td colspan="5" class="empty">暂无备份（移除启动项时自动创建）</td></tr>'; return; }
+    list.slice(0, 20).forEach(function(b) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = '<td class="muted">' + (b.Time || '') + '</td><td class="muted">' + (b.Action || '') + '</td><td class="muted">' + (b.Type || '') + '</td><td>' + (b.Name || '') + '</td>' +
+        '<td><button>恢复</button></td>';
+      tr.querySelector('button').onclick = async function() {
+        if (!confirm('恢复该启动项？\n\n' + (b.Name || ''))) return;
+        this.disabled = true; log('恢复: ' + (b.Name || ''));
+        try {
+          const r = await fetch(API + '/api/autostart-restore?backupId=' + encodeURIComponent(b.BackupId), {method:'POST'}).then(x => x.json());
+          log('结果: ' + (r.output || '').substring(0, 300));
+          setTimeout(loadAutostart, 2000);
+        } catch(e) { log('失败: ' + e.message); this.disabled = false; }
+      };
+      tbody.appendChild(tr);
+    });
+  } catch(e) { }
+}
+document.getElementById('btnAsAdd').onclick = async function() {
+  const n = document.getElementById('asName').value.trim();
+  const c = document.getElementById('asCmd').value.trim();
+  if (!n || !c) { alert('请输入名称和命令'); return; }
+  if (!confirm('添加启动项？\n\n' + n + ' -> ' + c)) return;
+  this.disabled = true; log('添加启动项: ' + n);
+  try {
+    const r = await fetch(API + '/api/autostart-add?name=' + encodeURIComponent(n) + '&command=' + encodeURIComponent(c), {method:'POST'}).then(x => x.json());
+    log('结果: ' + (r.output || '').substring(0, 300));
+    setTimeout(loadAutostart, 2000);
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false;
+};
+document.getElementById('auditFilterBtn').onclick = renderAudit;
+document.getElementById('auditType').onchange = renderAudit;
+document.getElementById('auditSearch').oninput = renderAudit;
+document.getElementById('btnExportCsv').onclick = function() { window.open(API + '/api/report?format=csv'); };
+document.getElementById('btnExportHtml').onclick = function() { window.open(API + '/api/report?format=html'); };
+document.getElementById('btnAddPath').onclick = async function() {
+  const p = document.getElementById('addPath').value.trim();
+  const t = document.getElementById('addType').value;
+  if (!p) { alert('请输入路径'); return; }
+  this.disabled = true; log('添加路径规则: ' + p + ' (' + t + ')');
+  try {
+    const r = await fetch(API + '/api/addpath?path=' + encodeURIComponent(p) + '&type=' + t, {method:'POST'}).then(x => x.json());
+    log('结果: ' + (r.output || '').substring(0, 400));
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false; setTimeout(refresh, 2000);
+};
+document.getElementById('btnDeny').onclick = async function() {
+  const p = document.getElementById('addPath').value.trim();
+  if (!p) { alert('请输入要禁止的程序路径'); return; }
+  if (!confirm('将该程序加入拒绝列表（Deny 优先于 Allow）？\n\n' + p)) return;
+  this.disabled = true; log('添加拒绝规则: ' + p);
+  try {
+    const r = await fetch(API + '/api/deny?path=' + encodeURIComponent(p), {method:'POST'}).then(x => x.json());
+    log('结果: ' + (r.output || '').substring(0, 300));
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false; setTimeout(refresh, 2000);
+};
+document.getElementById('btnNetBlock').onclick = async function() {
+  const p = document.getElementById('addPath').value.trim();
+  const addr = (document.getElementById('netAddr').value || '').trim();
+  if (!p) { alert('请输入程序路径'); return; }
+  if (!confirm('禁止该程序联网？\n\n' + p + (addr ? '\n目标: ' + addr : '\n目标: 全部'))) return;
+  this.disabled = true; log('禁止联网: ' + p + (addr ? ' -> ' + addr : ''));
+  try {
+    const url = API + '/api/netblock?path=' + encodeURIComponent(p) + (addr ? '&remoteAddress=' + encodeURIComponent(addr) : '');
+    const r = await fetch(url, {method:'POST'}).then(x => x.json());
+    log('结果: ' + (r.output || '').substring(0, 300));
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false;
+};
+document.getElementById('btnRefresh').onclick = refresh;
+document.getElementById('btnLearn').onclick = async function() {
+  this.disabled = true; log('触发学习采集…');
+  try { await fetch(API + '/api/learn', {method:'POST'}); log('学习已触发'); } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false; setTimeout(refresh, 3000);
+};
+document.getElementById('btnDeployAudit').onclick = async function() {
+  this.disabled = true; log('审计模式部署（安全，不拦截）…');
+  try {
+    const r = await fetch(API + '/api/deploy?mode=audit', {method:'POST'}).then(x => x.json());
+    log('审计部署: ' + (r.output || '').substring(0, 400));
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false; setTimeout(refresh, 2000);
+};
+document.getElementById('btnDeployEnforce').onclick = async function() {
+  const pre = await fetch(API + '/api/precheck').then(r => r.json()).catch(() => null);
+  const ok = pre && pre.Pass === true;
+  if (!ok) {
+    const missing = (pre && pre.Missing) ? pre.Missing.join(', ') : '未知';
+    alert('⚠️ 部署前检查未通过！\n\n缺失关键系统程序覆盖: ' + missing + '\n\n强制部署可能导致系统无法启动。\n建议先执行「审计部署」积累规则。');
+    return;
+  }
+  if (!confirm('策略覆盖率检查通过。\n强制部署后如出现异常，看门狗会在启动时自动回滚。\n\n确认部署？')) return;
+  this.disabled = true; log('强制部署…');
+  try {
+    const r = await fetch(API + '/api/deploy?mode=enforce', {method:'POST'}).then(x => x.json());
+    log(r.blocked ? '强制部署被阻断（覆盖率不足）' : ('强制部署: ' + (r.output || '').substring(0, 400)));
+  } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false; setTimeout(refresh, 2000);
+};
+document.getElementById('btnRollback').onclick = async function() {
+  if (!confirm('确认回滚策略？')) return;
+  this.disabled = true; log('回滚中…');
+  try { const r = await fetch(API + '/api/rollback', {method:'POST'}).then(x => x.json()); log('回滚结果: ' + (r.output || '').substring(0, 300)); } catch(e) { log('失败: ' + e.message); }
+  this.disabled = false; setTimeout(refresh, 2000);
+};
+refresh();
+setInterval(refresh, 15000);
+</script>
+</body>
+</html>

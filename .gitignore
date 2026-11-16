@@ -1,0 +1,9 @@
+﻿out/
+logs/
+backup/
+state/
+*.exe
+!installer/AppFence-Setup.exe
+*.pfx
+*.cer
+*.zip
